@@ -5,43 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Alunos</title>
+  <style>
+      .form-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.form-row {
+  display: contents;
+}
+.form-grid label {
+  align-self: center;
+  font-weight: 500;
+}
+.form-grid input[type="text"],
+.form-grid input[type="number"],
+.form-grid input[type="date"] {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.sexo-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.sexo-group label {
+  font-weight: 400;
+}
+    </style>
 </head>
 
 <body>
+<form>
+      <!--Fieldset - Cria um conjunto de dados com uma borda-->
+      <fieldset>
+  <legend>Informações pessoais</legend>
   <h1>Cadastro de Alunos</h1>
-  <form>
-    <!--Fieldset - Cria um conjunto de dados com uma borda-->
-    <fieldset>
-      <legend>Informações pessoais</legend>
-      <table border="1">
-        <tr>
-          <td>Matrícula:</td>
-          <!--placeholder - texto padrão que auxilia o usuário, indicando o que se espera naquele input
-        required - torna o preenchimento do input obrigatório-->
-          <td><input type="number" name="" id="" placeholder="123" required></td>
-        </tr>
-        <tr>
-          <td>Nome:</td>
-          <td><input type="text" name="" id="" placeholder="Fulano de tal" required></td>
-        </tr>
-        <tr>
-          <td>Data de nascimento:</td>
-          <td><input type="date" name="" id=""></td>
-        </tr>
-        <tr>
-          <td>Sexo:</td>
-          <!-- Type="radio" - Formato circular, e só permite escolher uma opção do conjunto, precisa que todos tenham o mesmo nome-->
-          <td><input type="radio" value="masculino" name="sexo" id="">Masculino</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="radio" value="feminino" name="sexo">Feminino</td>
-        </tr>
-      </table>
-      <input type="reset" value="Limpar" />
-      <input type="submit" value="Salvar" />
-    </fieldset>
+  <div class="form-grid">
+    <div class="form-row">
+      <label for="matricula">Matrícula:</label>
+      <input type="number" name="matricula" id="matricula" placeholder="123" required>
+    </div>
+    <div class="form-row">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" placeholder="Fulano de tal" required>
+    </div>
+    <div class="form-row">
+      <label for="nascimento">Data de nascimento:</label>
+      <input type="date" name="nascimento" id="nascimento">
+    </div>
+    <div class="form-row">
+      <label>Sexo:</label>
+      <div class="sexo-group">
+        <label><input type="radio" value="masculino" name="sexo"> Masculino</label>
+        <label><input type="radio" value="feminino" name="sexo"> Feminino</label>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 16px;">
+    <input type="reset" value="Limpar" />
+    <input type="submit" value="Salvar" />
+  </div>
+</fieldset>
   </form>
+  
 </body>
 
 </html>
