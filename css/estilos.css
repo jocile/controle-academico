@@ -1,0 +1,148 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 90vh;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 0px;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  background-color: #1976d2;
+  color: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.menu {
+  grid-area: menu;
+  background-color: #e3f2fd;
+  padding: 24px 12px;
+  margin-left: 5px;
+  border-radius: 0 12px 12px 0;
+  /* min-width: 80px; */
+  font-size: 1.1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.menu a {
+  display: block;
+  color: #1976d2;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: #f44336;
+}
+
+.content {
+  grid-area: content;
+  background-color: #fff;
+  padding: 32px 24px;
+  margin-right: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  min-width: 0;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #1976d2;
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+  font-size: 1rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* estilos do form */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-row {
+  display: contents;
+}
+
+.form-grid label {
+  align-self: center;
+  font-weight: 500;
+}
+
+.form-grid input[type="text"],
+.form-grid input[type="number"],
+.form-grid input[type="date"] {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.sexo-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.sexo-group label {
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "menu"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .menu {
+    border-radius: 0 0 12px 12px;
+    min-width: 0;
+    box-shadow: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+    justify-content: center;
+  }
+
+  .menu a {
+    padding: 4px;
+    margin-bottom: 0px;
+  }
+
+  .content {
+    margin: 0px 5px;
+    padding: 16px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}
