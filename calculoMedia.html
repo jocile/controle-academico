@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soma</title>
+  <style>
+    input {
+      margin: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: auto;
+    }
+    fieldset {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;      
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Cálculos</h1>
+  <form id="formularioExemplo">
+    <fieldset>
+    <legend>Calcular a média de três notas</legend>
+    <label for="nota1">Nota 1:</label>
+    <input type="number" id="nota1" name="nota1" 
+    min="0" max="10" step="0.1" required placeholder="7"><br>
+
+    <label for="nota2">Nota 2:</label>
+    <input type="number" id="nota2" name="nota2"
+    min="0" max="10" step="0.1" required><br>
+
+    <label for="nota3">Nota 3:</label>
+    <input type="number" id="nota3" name="nota3" min="0" max="10" step="0.1" required><br>
+
+    <button type="submit">Calcular a média</button>
+    </fieldset>
+  </form>
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById('formularioExemplo').addEventListener('submit', function (event) {
+      event.preventDefault(); // Evita o recarregamento da página
+      // Captura dos valores de entrada
+      let nota1 = parseFloat(document.getElementById('nota1').value);
+      let nota2 = parseFloat(document.getElementById('nota2').value);
+      let nota3 = parseFloat(document.getElementById('nota3').value);
+      // Lógica de programação (exemplo: soma)
+      let soma = nota1 + nota2 + nota3;
+      let media = soma / 3; // Cálculo da média
+      // Exibindo a saída no campo DOM
+      document.getElementById('resultado').textContent = `O resultado da média é: ${media}`;
+      if (media >= 7) {
+        document.getElementById('resultado').textContent += " - Aprovado";
+      } else {
+        document.getElementById('resultado').textContent += " - Reprovado";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
