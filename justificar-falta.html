@@ -26,7 +26,7 @@
 </head>
 <body>
   <h1>Sistema acadêmico</h1>
-  <form name="myform" action="" method="get" style="max-width: 500px;">
+  <form name="myform" action="" onsubmit="return testa_form(event)" method="get" style="max-width: 500px;">
     <fieldset>
       <legend>Justificativa de Falta</legend>
       <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center;">
@@ -43,7 +43,7 @@
         <input type="text" name="justificativa" id="justificativa" placeholder="Justificativa">
         
         <div style="grid-column: 1 / span 2; text-align: center; margin-top: 10px;">
-          <input type="button" value="Justificar Falta" onclick="justifica_falta(this.form)">
+          <input type="submit" value="Justificar Falta">
           <button type="reset">Limpar</button>
         </div>
       </div>
@@ -53,6 +53,31 @@
     <p id="resultado"></p>
 
 <script>
+  function testa_form() {
+    let form = document.forms["myform"];
+    if (form.matricula.value === "" || form.matricula.value == null ) {
+      alert("Preencha o campo matrícula!");
+      form.matricula.focus();
+      return false;
+    } else
+    if (form.nome_aluno.value === "" || form.nome_aluno.value == null) {
+      alert("Preencha o campo nome do aluno!");
+      form.nome_aluno.focus();
+      return false;
+    } else
+    if (form.data_falta.value === "" || form.data_falta.value == null) {
+      alert("Preencha o campo data da falta!");
+      form.data_falta.focus();
+      return false;
+    } else
+    if (form.justificativa.value === "" || form.justificativa.value == null) {
+      alert("Preencha o campo justificativa!");
+      form.justificativa.focus();
+      return false;
+    } else justifica_falta(form);
+    return false; // Evita o envio do formulário
+  }
+
   function justifica_falta(form) {
     let jf = confirm("Justificar falta?"+form.nome_aluno.value+"?");
     if (jf) {

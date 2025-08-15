@@ -69,6 +69,23 @@ p.fontedestaque {
   color: #f44336;
 }
 
+  .menu-list a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .menu-list a:hover {
+    background-color: #eee;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+
 .content {
   grid-area: content;
   background-color: #fff;
@@ -131,7 +148,18 @@ p.fontedestaque {
 .sexo-group label {
   font-weight: 400;
 }
+@media (max-width: 700px) {
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
 
+  .menu-list a {
+    padding: 4px 12px;
+  }
+}
 /* Estilos para telas pequenas */
 @media (max-width: 700px) {
   .container {
