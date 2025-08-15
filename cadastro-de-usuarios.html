@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de usuário</title>
+  <style>
+    form {
+      max-width: 500px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    label {
+      text-align: right;
+    }
+
+    .button-group {
+      grid-column: 1 / span 2;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Sistema acadêmico</h1>
+  <form name="myform" action="" onsubmit="return testa_form(event)" method="get" style="max-width: 500px;">
+    <fieldset>
+      <legend>Cadastro de Usuário</legend>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center;">
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" placeholder="Senha">
+        <label for="confirm-senha">Confirmar Senha:</label>
+        <input type="password" name="confirm-senha" id="confirm-senha" placeholder="Confirmar Senha">
+
+        <div style="grid-column: 1 / span 2; text-align: center; margin-top: 10px;">
+          <input type="submit" value="Submit">
+          <button type="reset">Limpar</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+  <p id="resultado"></p>
+
+  <script>
+    function testa_form() {
+      let form = document.forms["myform"];
+      if (form.nome.value === "" || form.nome.value == null) {
+        alert("Preencha o campo nome!");
+        form.nome.focus();
+        return false;
+      } else
+        if (form.senha.value === "" || form.senha.value == null) {
+          alert("Preencha o campo senha!");
+          form.senha.focus();
+          return false;
+        } else
+          if (form.confirm - senha.value === "" || form.confirm - senha.value == null) {
+            alert("Preencha o campo confirmar senha!");
+            form.confirm - senha.focus();
+            return false;
+          } else confirma_cadastro(form);
+      return false; // Evita o envio do formulário
+    }
+
+    function confirma_cadastro(form) {
+      let jf = confirm("Cadastrar " + form.nome.value + "?");
+      if (jf) {
+        document.getElementById("resultado").innerHTML = "Usuário cadastrado: " + form.nome.value;
+      } else {
+        document.getElementById("resultado").innerHTML = "Cadastro não realizado.";
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>
