@@ -37,12 +37,12 @@
       <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center;">
 
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" placeholder="Fulano de Tal">
 
         <label for="senha">Senha:</label>
-        <input type="password" name="senha" id="senha" placeholder="Senha">
+        <input type="password" name="senha" id="senha" placeholder="******">
         <label for="confirm-senha">Confirmar Senha:</label>
-        <input type="password" name="confirm-senha" id="confirm-senha" placeholder="Confirmar Senha">
+        <input type="password" name="confirmSenha" id="confirmSenha" placeholder="******">
 
         <div style="grid-column: 1 / span 2; text-align: center; margin-top: 10px;">
           <input type="submit" value="Submit">
@@ -67,9 +67,19 @@
           form.senha.focus();
           return false;
         } else
-          if (form.confirm - senha.value === "" || form.confirm - senha.value == null) {
+        if (form.senha.value.length < 6) {
+          alert("A senha deve ter pelo menos 6 caracteres!");
+          form.senha.focus();
+          return false;
+        } else
+          if (form.confirmSenha.value === "" || form.confirmSenha.value == null) {
             alert("Preencha o campo confirmar senha!");
-            form.confirm - senha.focus();
+            form.confirmSenha.focus();
+            return false;
+          } else
+          if (form.confirmSenha.value !== form.senha.value) {
+            alert("As senhas não conferem!");
+            form.confirmSenha.focus();
             return false;
           } else confirma_cadastro(form);
       return false; // Evita o envio do formulário
