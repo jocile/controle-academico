@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justificar Falta</title>
+  <style>
+    form {
+      max-width: 500px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      align-items: center;
+    }
+    label {
+      text-align: right;
+    }
+    .button-group {
+      grid-column: 1 / span 2;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistema acadêmico</h1>
+  <form name="myform" action="" method="get" style="max-width: 500px;">
+    <fieldset>
+      <legend>Justificativa de Falta</legend>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center;">
+        <label for="matricula" style="text-align: right;">Matrícula:</label>
+        <input type="text" name="matricula" id="matricula">
+        
+        <label for="nome_aluno" style="text-align: right;">Nome do Aluno:</label>
+        <input type="text" name="nome_aluno" id="nome_aluno">
+        
+        <label for="data_falta" style="text-align: right;">Data da Falta:</label>
+        <input type="date" name="data_falta" id="data_falta">
+        
+        <label for="justificativa" style="text-align: right;">Justificativa:</label>
+        <input type="text" name="justificativa" id="justificativa" placeholder="Justificativa">
+        
+        <div style="grid-column: 1 / span 2; text-align: center; margin-top: 10px;">
+          <input type="button" value="Justificar Falta" onclick="justifica_falta(this.form)">
+          <button type="reset">Limpar</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+    <p id="resultado"></p>
+
+<script>
+  function justifica_falta(form) {
+    let jf = confirm("Justificar falta?"+form.nome_aluno.value+"?");
+    if (jf) {
+      document.getElementById("resultado").innerHTML = "Falta justificada para: " + form.nome_aluno.value + " com o motivo: " + form.justificativa.value;
+    } else {
+      document.getElementById("resultado").innerHTML = "Falta não justificada.";
+    }
+
+  }
+</script>
+</body>
+</html>
