@@ -24,8 +24,8 @@
   $conexao->close();
   ?>
   <p></p>
-  <p><button onclick="window.location.href='matricula.html'">Cadastrar outro aluno</button>
-  <button onclick="window.location.href='lendo_dados_exemplo_livro.php'">Mostrar alunos cadastrados</button>
+  <p><button onclick="window.location.href='../frontend/matricula.html'">Cadastrar outro aluno</button>
+  <button onclick="window.location.href='../frontend/lendo_dados_exemplo_livro.php'">Mostrar alunos cadastrados</button>
   </p>
 
 </body>
