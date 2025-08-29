@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atualizar Curso</title>
+</head>
+<body>
+<iframe src="../backend/lendo_dados_exemplo_livro.php" frameborder="0"></iframe>
+
+  <form action="../backend/atualizarCurso.php" method="POST">
+    <label for="aluno">Nome do Aluno:</label>
+    <input type="text" id="aluno" name="aluno" required><br><br>
+
+    <label for="curso">Novo Curso:</label>
+    <input type="text" id="curso" name="curso" required><br><br>
+
+    <input type="submit" value="Atualizar">
+  </form>
+</body>
+</html>

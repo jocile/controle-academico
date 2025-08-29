@@ -26,6 +26,7 @@
   <p></p>
   <p><button onclick="window.location.href='../frontend/matricula.html'">Cadastrar outro aluno</button>
   <button onclick="window.location.href='../frontend/lendo_dados_exemplo_livro.php'">Mostrar alunos cadastrados</button>
+  <button onclick="window.location.href='../frontend/atualizarCurso.html'">Atualizar curso de aluno</button>
   </p>
 
 </body>
