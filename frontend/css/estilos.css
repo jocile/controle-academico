@@ -89,7 +89,7 @@ p.fontedestaque {
 .content {
   grid-area: content;
   background-color: #fff;
-  padding: 32px 24px;
+  padding: 10px 24px;
   margin-right: 10px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
