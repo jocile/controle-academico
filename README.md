@@ -41,5 +41,6 @@ Este sistema é apenas para fins didáticos e pode ser expandido conforme o apre
 
 ## Referências
 
+- [Sistema Acdêmico final](/sis_academico/README.md)
 - [Site das aulas de Programador WEB do Senac](https://jocile.com/programador-web/)
 - [Ebook Programador WEB - Biblioteca Digital Senac](https://bibliotecadigitalsenac.com.br/#/content/reference/uid/38a6ad64-c8d9-ee11-85fc-0022482328f7/player)
