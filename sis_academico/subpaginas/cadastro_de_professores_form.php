@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 
-<!-- Modelo de formulário para cadastro de alunos: https://www.w3schools.com/bootstrap5/bootstrap_form_input_group.php -->
 <div class="container p-3">
   <div class="card card shadow p-4 mb-4 bg-white">
     <div class="card-header text-center">
-      <h4>Formulário de Cadastro de Alunos</h4>
+      <h4>Formulário de Cadastro de Professores</h4>
     </div>
     <div class="card-body">
-      <form action="cadastro_de_alunos.php">
+      <form action="cadastro_de_professores.php">
         <div class="input-group mb-3">
           <span class="input-group-text">Nome:</span>
           <input type="text" class="form-control" id="nome" name="nome" required>
@@ -65,11 +64,30 @@
           <span class="input-group-text">Telefone:</span>
           <input type="text" class="form-control" id="telefone" name="telefone" required>
         </div>
-        <div class="card-footer text-center">
-          <input type="reset" class="btn btn-secondary" value="Limpar">
-          <input type="submit" class="btn btn-primary" value="Enviar">
-        </div>
-      </form>
     </div>
+    <div class="card-header text-center">
+      <h5>Informações acadêmicas: </h5>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Formação:</span>
+      <input type="text" class="form-control" id="formacao" name="formacao" required>
+      <span class="input-group-text">Titulação:</span>
+      <select name="titulacao" id="titulacao" class="form-select">
+        <option value="">Selecione a Titulação</option>
+        <option value="Ensino Médio">Ensino Médio</option>
+        <option value="Técnico">Técnico</option>
+        <option value="Tecnólogo">Tecnólogo</option>
+        <option value="Graduado">Graduado</option>
+        <option value="Especialista">Especialista</option>
+        <option value="Mestre">Mestre</option>
+        <option value="Doutor">Doutor</option>
+      </select>
+    </div>
+    <div class="card-footer text-center">
+      <input type="reset" class="btn btn-secondary" value="Limpar">
+      <input type="submit" class="btn btn-primary" value="Enviar">
+    </div>
+    </form>
   </div>
+</div>
 </div>
