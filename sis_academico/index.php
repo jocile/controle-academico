@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container-fluid bg-primary vh-100">
+  <div class="container-md bg-primary">
 
     <div class="container-fluid bg-primary text-white p-3 text-center">
       <h2>Controle Acadêmico</h2>
