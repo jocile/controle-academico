@@ -61,7 +61,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="regimento.php" target="_blank">Regimento Escolar</a>
+              <a class="nav-link" href="index.php?pagina=regimento">Regimento Escolar</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://jocile.com/programador-web/" target="_blank">Aulas</a>
