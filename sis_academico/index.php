@@ -75,7 +75,6 @@
     </nav>
     <!-- Conteúdo Principal -->
     <div class="container-fluid bg-light rounded-3 main-content">
-      <!-- <div class="col-10 bg-light h-100 p-3 rounded-3"> -->
       <?php
       // Verifica se o parâmetro 'pagina' foi passado e é uma string
       if (isset($_GET['pagina']) && is_string($_GET['pagina'])) {

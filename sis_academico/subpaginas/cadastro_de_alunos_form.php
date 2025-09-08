@@ -7,7 +7,7 @@
       <h4>Formulário de Cadastro de Alunos</h4>
     </div>
     <div class="card-body">
-      <form action="cadastro_de_alunos.php">
+      <form action="database/cadastro_de_alunos.php" method="post">
         <div class="input-group mb-3">
           <span class="input-group-text">Nome:</span>
           <input type="text" class="form-control" id="nome" name="nome" required>
@@ -34,33 +34,41 @@
           <span class="input-group-text">Estado:</span>
           <select name="estado" id="estado" class="form-select">
             <option value="">Selecione o Estado</option>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
+
+            <?php
+            $estados = [
+              'AC' => 'Acre',
+              'AL' => 'Alagoas',
+              'AP' => 'Amapá',
+              'AM' => 'Amazonas',
+              'BA' => 'Bahia',
+              'CE' => 'Ceará',
+              'DF' => 'Distrito Federal',
+              'ES' => 'Espírito Santo',
+              'GO' => 'Goiás',
+              'MA' => 'Maranhão',
+              'MT' => 'Mato Grosso',
+              'MS' => 'Mato Grosso do Sul',
+              'MG' => 'Minas Gerais',
+              'PA' => 'Pará',
+              'PB' => 'Paraíba',
+              'PR' => 'Paraná',
+              'PE' => 'Pernambuco',
+              'PI' => 'Piauí',
+              'RJ' => 'Rio de Janeiro',
+              'RN' => 'Rio Grande do Norte',
+              'RS' => 'Rio Grande do Sul',
+              'RO' => 'Rondônia',
+              'RR' => 'Roraima',
+              'SC' => 'Santa Catarina',
+              'SP' => 'São Paulo',
+              'SE' => 'Sergipe',
+              'TO' => 'Tocantins'
+            ];
+            foreach ($estados as $sigla => $estado) {
+              echo '<option value="' . $sigla . '">' . $estado . '</option>';
+            }
+            ?>
           </select>
           <span class="input-group-text">Telefone:</span>
           <input type="text" class="form-control" id="telefone" name="telefone" required>
