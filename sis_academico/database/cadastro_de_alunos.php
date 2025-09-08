@@ -37,10 +37,11 @@ mysqli_query($conexao, $criarTabela);
 // Inserção dos dados na tabela
 $inserir = "INSERT INTO alunos (nome, cpf, endereco, complemento, cep, bairro, cidade, estado, telefone) VALUES ('$nome', '$cpf', '$endereco', '$complemento', '$cep', '$bairro', '$cidade', '$estado', '$telefone')";
 if (mysqli_query($conexao, $inserir)) {
-    echo "Cadastro realizado com sucesso!";
+    // Fechar conexão
+    mysqli_close($conexao);
+    // Redireciona para a página de sucesso
+    header("Location: ../index.php?pagina=cadastro_sucesso");
 } else {
     echo "Erro ao cadastrar: " . mysqli_error($conexao);
 }
-
-// Fechar conexão
 mysqli_close($conexao);
