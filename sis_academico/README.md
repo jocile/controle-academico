@@ -4,8 +4,8 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 
 ## Funcionalidades
 
-- [ ] Cadastro de alunos
-- [ ] Cadastro de professor
+- [x] Cadastro de alunos
+- [x] Cadastro de professor
 - [ ] Cadastro de curso
 - [ ] Matrícula em curso
 - [ ] Cadastro de disciplina

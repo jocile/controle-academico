@@ -13,6 +13,8 @@ $bairro = $_POST["bairro"];
 $cidade = $_POST["cidade"];
 $estado = $_POST["estado"];
 $telefone = $_POST["telefone"];
+$formacao = $_POST["formacao"];
+$titulacao = $_POST["titulacao"];
 
 // Conexão com o banco de dados
 require("conexao.php");
@@ -28,7 +30,7 @@ if ($conexao->query($banco)) {
 mysqli_select_db($conexao, "sis_academico");
 
 // Cria a tabela se não existir
-$criarTabela = "CREATE TABLE IF NOT EXISTS alunos (
+$criarTabela = "CREATE TABLE IF NOT EXISTS professores (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         cpf VARCHAR(14) NOT NULL,
@@ -39,12 +41,14 @@ $criarTabela = "CREATE TABLE IF NOT EXISTS alunos (
         cidade VARCHAR(100) NOT NULL,
         estado VARCHAR(2) NOT NULL,
         telefone VARCHAR(15),
+        formacao VARCHAR(100) NOT NULL,
+        titulacao VARCHAR(100) NOT NULL,
         data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
 mysqli_query($conexao, $criarTabela);
 
 // Inserção dos dados na tabela
-$inserir = "INSERT INTO alunos (nome, cpf, endereco, complemento, cep, bairro, cidade, estado, telefone) VALUES ('$nome', '$cpf', '$endereco', '$complemento', '$cep', '$bairro', '$cidade', '$estado', '$telefone')";
+$inserir = "INSERT INTO professores (nome, cpf, endereco, complemento, cep, bairro, cidade, estado, telefone, formacao, titulacao) VALUES ('$nome', '$cpf', '$endereco', '$complemento', '$cep', '$bairro', '$cidade', '$estado', '$telefone', '$formacao', '$titulacao')";
 if (mysqli_query($conexao, $inserir)) {
     // Fechar conexão
     mysqli_close($conexao);

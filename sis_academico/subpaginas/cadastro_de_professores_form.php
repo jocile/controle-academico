@@ -6,7 +6,7 @@
       <h4>Formulário de Cadastro de Professores</h4>
     </div>
     <div class="card-body">
-      <form action="database/cadastro_de_professores.php">
+      <form action="database/cadastro_de_professores.php" method="post">
         <div class="input-group mb-3">
           <span class="input-group-text">Nome:</span>
           <input type="text" class="form-control" id="nome" name="nome" required>
