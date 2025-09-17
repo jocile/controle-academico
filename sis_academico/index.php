@@ -28,10 +28,10 @@
               <ul class="dropdown-menu">
                 <?php
                 $menu = [
-                  'Cadastro de alunos' => 'cadastro_de_alunos_form',
-                  'Cadastro de professores' => 'cadastro_de_professores_form',
-                  'Cadastro de cursos' => 'cadastro_de_cursos_form',
-                  'Matrícula' => 'menuMatricula',
+                  'Cadastro de alunos' => 'cadastro-de-alunos',
+                  'Cadastro de professores' => 'cadastro-de-professores',
+                  'Cadastro de cursos' => 'cadastro-de-cursos',
+                  'Matrícula' => 'menu-matricula',
                   'Cadastro de usuários' => 'cadastro-de-usuarios',
                   'Justificar Falta' => 'justificar-falta'
                 ];

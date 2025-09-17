@@ -17,18 +17,8 @@ $telefone = $_POST["telefone"];
 // Conexão com o banco de dados
 require("conexao.php");
 
-// Criando o banco de dados se não existir
-$banco = "CREATE DATABASE IF NOT EXISTS sis_academico";
-if ($conexao->query($banco)) {
-    echo "Banco de dados 'sis_academico' criado com sucesso.<br>";
-} else {
-    echo "Erro ao criar banco de dados: " . $conexao->error;
-}
-
-mysqli_select_db($conexao, "sis_academico");
-
 // Cria a tabela se não existir
-$criarTabela = "CREATE TABLE IF NOT EXISTS alunos (
+$criarTabelaAluno = "CREATE TABLE IF NOT EXISTS alunos (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         cpf VARCHAR(14) NOT NULL,
@@ -41,16 +31,16 @@ $criarTabela = "CREATE TABLE IF NOT EXISTS alunos (
         telefone VARCHAR(15),
         data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
-mysqli_query($conexao, $criarTabela);
+mysqli_query($conn, $criarTabelaAluno);
 
 // Inserção dos dados na tabela
 $inserir = "INSERT INTO alunos (nome, cpf, endereco, complemento, cep, bairro, cidade, estado, telefone) VALUES ('$nome', '$cpf', '$endereco', '$complemento', '$cep', '$bairro', '$cidade', '$estado', '$telefone')";
-if (mysqli_query($conexao, $inserir)) {
+if (mysqli_query($conn, $inserir)) {
     // Fechar conexão
-    mysqli_close($conexao);
+    mysqli_close($conn);
     // Redireciona para a página de sucesso
-    header("Location: ../index.php?pagina=cadastro_sucesso");
+    header("Location: ../index.php?pagina=sucesso");
 } else {
-    echo "Erro ao cadastrar: " . mysqli_error($conexao);
+    echo "Erro ao cadastrar: " . mysqli_error($conn);
 }
-mysqli_close($conexao);
+mysqli_close($conn);
