@@ -1,9 +1,12 @@
 # Sistema Acadêmico
 
+[Visualizar o Sistema acdêmico](https://sisacad.page.gd/)
+
 Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia para programação e manipulação de banco de dados - Editora Senac](https://bibliotecadigitalsenac.com.br/#/content/uid/dfc3ed6f-17d8-ee11-85fa-00224821b803/detail).
 
 ## Funcionalidades
 
+- [x] Cadastro de usuários para o login
 - [x] Cadastro de alunos
 - [x] Cadastro de professor
 - [ ] Cadastro de curso

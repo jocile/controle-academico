@@ -29,11 +29,14 @@ Este projeto é uma atividade prática desenvolvida durante o curso de programa�
 
 ## Estrutura do Projeto
 
-- backend/ - Scripts PHP para cadastro e manipulação de dados
-- frontend/ - Arquivos HTML para interface de visualização e entradas de dados
-- frontend/css/ - Arquivos de estilo
-- frontend/index.html - Página inicial do sistema
+- sis_academico_inicial/backend/ - Testes inciais de Scripts PHP para cadastro e manipulação de dados
+- sis_academico_inicial/frontend/ - Testes iniciais de arquivos HTML para interface de visualização e entradas de dados
+- sis_academico_inicial/frontend/css/ - Arquivos de estilo
+- sis_academico_inicial/frontend/index.html - Página inicial do sistema
 - testes/ - Outros arquivos de testes de interface e funcionalidades
+- [Visualizar Sistema final](https://sisacad.page.gd/)
+- sis_academico/database - Scripts PHP para cadastro e manipulação de dados
+- sis_academico/subpaginas - Formulários de cadastro
 
 ## Observações
 
