@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container-md bg-primary">
+  <div class="container-fluid bg-primary" style="min-height: 100vh; display: flex; flex-direction: column;">
 
     <div class="container-fluid bg-primary text-white p-3 text-center">
       <h2>Controle Acadêmico</h2>
@@ -74,7 +74,7 @@
       </div>
     </nav>
     <!-- Conteúdo Principal -->
-    <div class="container-fluid bg-light rounded-3 main-content">
+    <div class="container-fluid bg-light rounded-3 main-content pb-6 flex-grow-1">
       <?php
       // Verifica se o parâmetro 'pagina' foi passado e é uma string
       if (isset($_GET['pagina']) && is_string($_GET['pagina'])) {
@@ -96,7 +96,7 @@
       }
       ?>
     </div>
-    <div class="col bg-primary text-white p-3 text-center mt-3">
+    <div class="fixed-bottom col bg-primary text-white py-2 mt-auto text-center">
       &copy; 2025 Controle Acadêmico. Todos os direitos reservados. Feito com ♥ por <a class="text-white" href="https://jocile.com/jocile/"
         target="conteudo">Jocilé
         Serra</a>

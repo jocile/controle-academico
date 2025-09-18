@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<div class="container">
-  <div class="row mt-5">
+<div class="container p-4">
+  <div class="row mt-2">
     <div class="card col-lg-4 col-md-6 col-sm-8 offset-lg-4 offset-md-3 offset-sm-2">
       <div class="card-header text-center">
         <h2>Cadastro de usuário</h2>

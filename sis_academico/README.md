@@ -9,7 +9,7 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 - [x] Cadastro de usuários para o login
 - [x] Cadastro de alunos
 - [x] Cadastro de professor
-- [ ] Cadastro de curso
+- [x] Cadastro de curso
 - [ ] Matrícula em curso
 - [ ] Cadastro de disciplina
 - [ ] Cadastro de disciplinas nos cursos
@@ -20,6 +20,11 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 - [ ] Consulta de disciplinas de um curso
 - [ ] Consulta de alunos(as) matriculados(as) em um curso
 - [ ] Consulta de alunos(as) matriculados(as) em uma turma
+
+## Estrutura do Projeto
+
+- sis_academico/database - Scripts PHP para cadastro e manipulação de dados
+- sis_academico/subpaginas - Formulários de cadastro
 
 ## Referências
 

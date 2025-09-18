@@ -71,30 +71,30 @@
           <span class="input-group-text">Telefone:</span>
           <input type="text" class="form-control" id="telefone" name="telefone" required>
         </div>
+
+        <div class="card-header text-center">
+          <h5>Informações acadêmicas: </h5>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Formação:</span>
+          <input type="text" class="form-control" id="formacao" name="formacao" required>
+          <span class="input-group-text">Titulação:</span>
+          <select name="titulacao" id="titulacao" class="form-select">
+            <option value="">Selecione a Titulação</option>
+            <option value="Ensino Médio">Ensino Médio</option>
+            <option value="Técnico">Técnico</option>
+            <option value="Tecnólogo">Tecnólogo</option>
+            <option value="Graduado">Graduado</option>
+            <option value="Especialista">Especialista</option>
+            <option value="Mestre">Mestre</option>
+            <option value="Doutor">Doutor</option>
+          </select>
+        </div>
+        <div class="card-footer text-center">
+          <input type="reset" class="btn btn-secondary" value="Limpar">
+          <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+      </form>
     </div>
-    <div class="card-header text-center">
-      <h5>Informações acadêmicas: </h5>
-    </div>
-    <div class="input-group mb-3">
-      <span class="input-group-text">Formação:</span>
-      <input type="text" class="form-control" id="formacao" name="formacao" required>
-      <span class="input-group-text">Titulação:</span>
-      <select name="titulacao" id="titulacao" class="form-select">
-        <option value="">Selecione a Titulação</option>
-        <option value="Ensino Médio">Ensino Médio</option>
-        <option value="Técnico">Técnico</option>
-        <option value="Tecnólogo">Tecnólogo</option>
-        <option value="Graduado">Graduado</option>
-        <option value="Especialista">Especialista</option>
-        <option value="Mestre">Mestre</option>
-        <option value="Doutor">Doutor</option>
-      </select>
-    </div>
-    <div class="card-footer text-center">
-      <input type="reset" class="btn btn-secondary" value="Limpar">
-      <input type="submit" class="btn btn-primary" value="Enviar">
-    </div>
-    </form>
   </div>
-</div>
 </div>

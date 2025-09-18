@@ -31,11 +31,14 @@ $criarTabelaAluno = "CREATE TABLE IF NOT EXISTS alunos (
         telefone VARCHAR(15),
         data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
-mysqli_query($conn, $criarTabelaAluno);
+//mysqli_query($conn, $criarTabelaAluno);
+if ($conn->query($criarTabelaAluno ) === false) {
+    echo "Erro ao criar a tabela: " . $conn->error;
+  }
 
 // Inserção dos dados na tabela
 $inserir = "INSERT INTO alunos (nome, cpf, endereco, complemento, cep, bairro, cidade, estado, telefone) VALUES ('$nome', '$cpf', '$endereco', '$complemento', '$cep', '$bairro', '$cidade', '$estado', '$telefone')";
-if (mysqli_query($conn, $inserir)) {
+if ($conn->query($inserir)) {
     // Fechar conexão
     mysqli_close($conn);
     // Redireciona para a página de sucesso
