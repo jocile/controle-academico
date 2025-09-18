@@ -28,6 +28,6 @@ if (mysqli_query($conn, $inserir)) {
   print "<script>setTimeout(function(){ location.href='../index.php?pagina=sucesso'; }, 9000);</script>";
 } else {
   echo "<script>alert('Erro ao cadastrar usuário!');</script>";
-  print "<script>setTimeout(function(){ location.href='cadastroForm.php'; }, 9000);</script>";
+  print "<script>setTimeout(function(){ location.href='../index.php?pagina=cadastro-de-usuarios'; }, 9000);</script>";
 }
 mysqli_close($conn);
