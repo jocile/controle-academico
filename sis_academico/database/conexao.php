@@ -13,7 +13,7 @@ if ($conn->connect_error) {
   }
 
 // Criando o banco de dados se não existir
-require("criarBanco.php");
+require_once("criarBanco.php");
 criarBanco($conn, $database);
 
 // Selecionando o banco de dados

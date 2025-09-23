@@ -10,7 +10,7 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 - [x] Cadastro de alunos
 - [x] Cadastro de professor
 - [x] Cadastro de curso
-- [ ] Matrícula em curso
+- [x] Matrícula em curso
 - [ ] Cadastro de disciplina
 - [ ] Cadastro de disciplinas nos cursos
 - [ ] Cadastro de turma

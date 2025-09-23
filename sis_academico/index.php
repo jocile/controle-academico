@@ -31,7 +31,7 @@
                   'Cadastro de alunos' => 'cadastro-de-alunos',
                   'Cadastro de professores' => 'cadastro-de-professores',
                   'Cadastro de cursos' => 'cadastro-de-cursos',
-                  'Matrícula' => 'menu-matricula',
+                  'Matrícula de cursos' => 'matricula-de-cursos',
                   'Cadastro de usuários' => 'cadastro-de-usuarios',
                   'Justificar Falta' => 'justificar-falta'
                 ];
