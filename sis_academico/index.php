@@ -33,6 +33,7 @@
                   'Cadastro de cursos' => 'cadastro-de-cursos',
                   'Matrícula de cursos' => 'matricula-de-cursos',
                   'Cadastro de usuários' => 'cadastro-de-usuarios',
+                  'Cadastro de disciplinas' => 'cadastro-de-disciplinas',
                   'Justificar Falta' => 'justificar-falta'
                 ];
                 foreach ($menu as $item => $pagina) {
