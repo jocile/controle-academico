@@ -34,6 +34,9 @@
                   'Matrícula de cursos' => 'matricula-de-cursos',
                   'Cadastro de usuários' => 'cadastro-de-usuarios',
                   'Cadastro de disciplinas' => 'cadastro-de-disciplinas',
+                  'Cadastro de disciplinas em cursos' => 'cadastro-de-disciplinas-em-cursos',
+                  'Cadastro de turmas' => 'cadastro-de-turmas',
+                  'Matrícula de alunos em turmas' => 'matricula-de-alunos-em-turmas',
                   'Justificar Falta' => 'justificar-falta'
                 ];
                 foreach ($menu as $item => $pagina) {
