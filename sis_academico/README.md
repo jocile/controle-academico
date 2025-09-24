@@ -15,6 +15,7 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 - [ ] Cadastro de disciplinas nos cursos
 - [ ] Cadastro de turma
 - [ ] Cadastro de aluno em turma
+- [x] Cadastro de justificativa de faltas
 - [ ] Consulta de coordenador(a) de um curso
 - [ ] Consulta de professor(a) de uma disciplina
 - [ ] Consulta de disciplinas de um curso
