@@ -21,7 +21,7 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 - [ ] Consulta de alunos em uma turma
 - [x] Consulta de professores
 - [x] Consulta de professor(a) de uma disciplina
-- [ ] Consulta de cursos
+- [x] Consulta de cursos
 - [ ] Consulta de disciplinas
 - [ ] Consulta de turmas
 - [ ] Consulta de disciplinas em um curso
