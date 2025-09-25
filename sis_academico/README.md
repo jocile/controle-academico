@@ -22,7 +22,7 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 - [x] Consulta de professores
 - [x] Consulta de professor(a) de uma disciplina
 - [x] Consulta de cursos
-- [ ] Consulta de disciplinas
+- [x] Consulta de disciplinas
 - [ ] Consulta de turmas
 - [ ] Consulta de disciplinas em um curso
 - [ ] Consulta de coordenador(a) de um curso
