@@ -6,10 +6,7 @@
       <h4>Alunos cadastrados</h4>
     </div>
     <div class="card-body">
-
-
       <?php
-
       // Conexão com o banco de dados
       require("database/conexao.php");
 

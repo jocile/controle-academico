@@ -16,16 +16,16 @@ Finalizando o sistema seguindo o capítulo 6 do livro [Programador web: um guia 
 - [x] Cadastro de turma
 - [x] Cadastro de aluno em turma
 - [x] Cadastro de justificativa de faltas
-- [ ] Consulta de alunos
-- [ ] Consulta de professores
+- [x] Consulta de alunos
+- [x] Consulta de alunos em um curso
+- [ ] Consulta de alunos em uma turma
+- [x] Consulta de professores
+- [x] Consulta de professor(a) de uma disciplina
 - [ ] Consulta de cursos
 - [ ] Consulta de disciplinas
 - [ ] Consulta de turmas
 - [ ] Consulta de disciplinas em um curso
-- [ ] Consulta de alunos em um curso
-- [ ] Consulta de alunos em uma turma
 - [ ] Consulta de coordenador(a) de um curso
-- [ ] Consulta de professor(a) de uma disciplina
 - [ ] Consulta de disciplinas de um curso
 - [ ] Consulta de alunos(as) matriculados(as) em um curso
 - [ ] Consulta de alunos(as) matriculados(as) em uma turma
