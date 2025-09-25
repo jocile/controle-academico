@@ -11,23 +11,25 @@
       require("database/conexao.php");
 
       // Inicia a consulta para mostrar os alunos cadastrados e os cursos em que estão matriculados
-      $consulta = "SELECT alunos.id AS aluno_id, alunos.nome AS aluno_nome, cursos.id AS curso_id, cursos.nome AS curso_nome
-        FROM matriculas
-        LEFT JOIN alunos ON matriculas.aluno_id = alunos.id
-        LEFT JOIN cursos ON matriculas.curso_id = cursos.id
+      $consulta = "SELECT * FROM alunos
         ORDER BY alunos.nome";
       $resultado = $conn->query($consulta);
 
       if ($resultado->num_rows > 0) {
         echo '<table class="table table-bordered table-striped">';
-        //echo '<thead><tr><th>Nome do Aluno</th><th>Curso</th><th>Turma</th></tr></thead>';
-        echo '<thead><tr><th>Nome do Aluno</th><th>Curso</th></tr></thead>';
+        echo '<thead><tr><th>Nome do Aluno</th><th>CPF</th><th>Endereço</th><th>Complemento</th><th>CEP</th><th>Bairro</th><th>Cidade</th><th>Estado</th><th>Telefone</th></tr></thead>';
         echo '<tbody>';
         while ($linha = $resultado->fetch_assoc()) {
           echo '<tr>';
-          echo '<td>' . htmlspecialchars($linha['aluno_nome']) . '</td>';
-          echo '<td>' . htmlspecialchars($linha['curso_nome'] ?? 'N/A') . '</td>';
-          //echo '<td>' . htmlspecialchars($linha['turma_nome'] ?? 'N/A') . '</td>';
+          echo '<td>' . htmlspecialchars($linha['nome']) . '</td>';
+          echo '<td>' . htmlspecialchars($linha['cpf']) . '</td>';
+          echo '<td>' . htmlspecialchars($linha['bairro'] ?? 'N/A') . '</td>';
+          echo '<td>' . htmlspecialchars($linha['endereco'] ?? 'N/A') . '</td>';
+          echo '<td>' . htmlspecialchars($linha['complemento'] ?? 'N/A') . '</td>';
+          echo '<td>' . htmlspecialchars($linha['cep'] ?? 'N/A') . '</td>';
+          echo '<td>' . htmlspecialchars($linha['cidade'] ?? 'N/A') . '</td>';
+          echo '<td>' . htmlspecialchars($linha['estado'] ?? 'N/A') . '</td>';
+          echo '<td>' . htmlspecialchars($linha['telefone'] ?? 'N/A') . '</td>';
           echo '</tr>';
         }
         echo '</tbody></table>';
