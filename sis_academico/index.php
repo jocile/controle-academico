@@ -60,10 +60,10 @@
                   'Consulta de turmas' => 'consulta_de_turmas',
                   'Consulta de disciplinas de um curso' => 'consulta_de_disciplinas_em_cursos',
                   'Consulta de Coordenador(a) de um curso' => 'consulta_coordenador_de_curso',
-                  'Histórico Escolar' => 'historico_escolar',
-                  'Matrículas Ativas' => 'matriculas_ativas',
-                  'Faltas' => 'faltas',
-                  'Justificativas' => 'justificativas'
+                  'Histórico Escolar' => 'em-construcao',
+                  'Matrículas Ativas' => 'em-construcao',
+                  'Faltas' => 'em-construcao',
+                  'Justificativas' => 'em-construcao'
                 ];
                 foreach ($menu as $item => $pagina) {
                   echo '<li><a class="dropdown-item" href="index.php?pagina=' . $pagina . '">' . $item . '</a></li>';
